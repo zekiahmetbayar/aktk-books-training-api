@@ -1,0 +1,478 @@
+{
+	"info": {
+		"_postman_id": "5a8b098c-51b4-4cb3-90ac-a0ac7ddbdb2a",
+		"name": "Books API Training",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24981649"
+	},
+	"item": [
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Kaşağı234\",\r\n    \"page_count\" : 90,\r\n    \"author_id\" : 1,\r\n    \"vendor\" : \"xyz basım dağıtım\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/books",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Kaşağı 4\",\r\n    \"page_count\" : 90,\r\n    \"author\" : \"Ömer Seyfettin\",\r\n    \"vendor\" : \"xyz basım dağıtım\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/books",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"books"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 07 Apr 2023 12:34:52 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "105"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"name\": \"Kaşağı 4\",\n    \"author\": \"Ömer Seyfettin\",\n    \"vendor\": \"xyz basım dağıtım\",\n    \"page_count\": 90\n}"
+						}
+					]
+				},
+				{
+					"name": "Index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/books",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Index",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/books",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"books"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 07 Apr 2023 12:48:11 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "159"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Kaşağı 4\",\n        \"vendor\": \"xyz basım dağıtım\",\n        \"page_count\": 90,\n        \"author_id\": 1,\n        \"author\": {\n            \"id\": 1,\n            \"name\": \"Ömer Seyfettin\",\n            \"age\": 46,\n            \"books\": null\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"name\": \"Bambaşka bir isim\",\r\n    \"author\": \"Bambaşka bir yazar\",\r\n    \"vendor\": \"xyz basım dağıtım\",\r\n    \"page_count\": 90\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/books/3",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"books",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 3,\r\n    \"name\": \"Bambaşka bir isim\",\r\n    \"author\": \"Bambaşka bir yazar\",\r\n    \"vendor\": \"xyz basım dağıtım\",\r\n    \"page_count\": 90\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/books/3",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"books",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 07 Apr 2023 12:36:50 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "116"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"name\": \"Bambaşka bir isim\",\n    \"author\": \"Bambaşka bir yazar\",\n    \"vendor\": \"xyz basım dağıtım\",\n    \"page_count\": 90\n}"
+						}
+					]
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/books/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Show",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/books/1",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"books",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 07 Apr 2023 12:47:51 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "157"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"Kaşağı 4\",\n    \"vendor\": \"xyz basım dağıtım\",\n    \"page_count\": 90,\n    \"author_id\": 1,\n    \"author\": {\n        \"id\": 1,\n        \"name\": \"Ömer Seyfettin\",\n        \"age\": 46,\n        \"books\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/books/3",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"books",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/books/3",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"books",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 07 Apr 2023 12:37:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								}
+							],
+							"cookie": [],
+							"body": "\"Item deleted successfully.\""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Authors",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Ömer Seyfettin\",\r\n    \"age\" : 46\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/authors",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"authors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Ömer Seyfettin\",\r\n    \"age\" : 46\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/authors",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"authors"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 07 Apr 2023 12:45:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "55"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"Ömer Seyfettin\",\n    \"age\": 46,\n    \"books\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/authors",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"authors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Index",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/authors",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"authors"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 07 Apr 2023 12:49:01 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "803"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Ömer Seyfettin\",\n        \"age\": 46,\n        \"books\": [\n            {\n                \"id\": 1,\n                \"name\": \"Kaşağı 4\",\n                \"vendor\": \"xyz basım dağıtım\",\n                \"page_count\": 90,\n                \"author_id\": 1,\n                \"author\": null\n            },\n            {\n                \"id\": 2,\n                \"name\": \"Kaşağı\",\n                \"vendor\": \"xyz basım dağıtım\",\n                \"page_count\": 90,\n                \"author_id\": 1,\n                \"author\": null\n            },\n            {\n                \"id\": 3,\n                \"name\": \"Kaşağı2\",\n                \"vendor\": \"xyz basım dağıtım\",\n                \"page_count\": 90,\n                \"author_id\": 1,\n                \"author\": null\n            },\n            {\n                \"id\": 4,\n                \"name\": \"Kaşağı23\",\n                \"vendor\": \"xyz basım dağıtım\",\n                \"page_count\": 90,\n                \"author_id\": 1,\n                \"author\": null\n            },\n            {\n                \"id\": 5,\n                \"name\": \"Kaşağı234\",\n                \"vendor\": \"xyz basım dağıtım\",\n                \"page_count\": 90,\n                \"author_id\": 1,\n                \"author\": null\n            },\n            {\n                \"id\": 6,\n                \"name\": \"Kaşağı234\",\n                \"vendor\": \"xyz basım dağıtım\",\n                \"page_count\": 90,\n                \"author_id\": 1,\n                \"author\": null\n            },\n            {\n                \"id\": 7,\n                \"name\": \"Kaşağı234\",\n                \"vendor\": \"xyz basım dağıtım\",\n                \"page_count\": 90,\n                \"author_id\": 1,\n                \"author\": null\n            }\n        ]\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:3001",
+			"type": "string"
+		}
+	]
+}
